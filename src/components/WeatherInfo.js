@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTemperatureHigh, faWind, faCloudRain, faCloud, faTint } from '@fortawesome/free-solid-svg-icons';
 import styles from './WeatherInfo.module.css';
 
 const WeatherInfo = ({ weatherData, isMetric, toggleUnit }) => {
@@ -34,33 +36,53 @@ const WeatherInfo = ({ weatherData, isMetric, toggleUnit }) => {
     <div className={styles.weatherInfo}>
       <h2>{name}</h2>
       {img && <img className={styles.weatherIcon} src={img} alt="Weather Icon" />}
-      <div className={styles.weatherConverterContainer}>
-        <div className={styles.unitButtons}>
-          <button
-            className={`${styles.weatherConverterButton} ${isMetric ? styles.active : ''}`}
-            onClick={toggleUnit} // Use the toggleUnit function directly
-          >
-            Metric
-          </button>
-          <button
-            className={`${styles.weatherConverterButton} ${!isMetric ? styles.active : ''}`}
-            onClick={toggleUnit} // Use the toggleUnit function directly
-          >
-            Imperial
-          </button>
+      <div className={styles.weatherDetails}>
+        <div className={`${styles.iconInfo} ${styles.temperatureIcon}`}>
+          <FontAwesomeIcon
+            icon={faTemperatureHigh}
+            className={styles.weatherIcon}
+          />
+          <p className={styles.weatherInfoText}>
+            Temperature: {convertTemperature(main.temp).toFixed(1)} {temperatureUnit}
+          </p>
         </div>
-        <p className={styles.weatherConverterInfo}>
-          Temperature: {convertTemperature(main.temp)} {temperatureUnit}
-        </p>
-        <p className={styles.weatherConverterInfo}>
-          Wind Speed: {convertWindSpeed(weatherData.wind.speed)} {windSpeedUnit}
-        </p>
+        <div className={`${styles.iconInfo} ${styles.windIcon}`}>
+          <FontAwesomeIcon
+            icon={faWind}
+            className={styles.weatherIcon}
+          />
+          <p className={styles.weatherInfoText}>
+            Wind Speed: {convertWindSpeed(weatherData.wind.speed).toFixed(1)} {windSpeedUnit}
+          </p>
+        </div>
+        <div className={`${styles.iconInfo} ${styles.rainIcon}`}>
+          <FontAwesomeIcon
+            icon={faCloudRain}
+            className={styles.weatherIcon}
+          />
+          <p className={styles.weatherInfoText}>Rain: {rainChances}</p>
+        </div>
+        <div className={`${styles.iconInfo} ${styles.cloudIcon}`}>
+          <FontAwesomeIcon
+            icon={faCloud}
+            className={styles.weatherIcon}
+          />
+          <p className={styles.weatherInfoText}>Cloud Cover: {cloudCover}</p>
+        </div>
+        <div className={`${styles.iconInfo} ${styles.humidityIcon}`}>
+          <FontAwesomeIcon
+            icon={faTint}
+            className={styles.weatherIcon}
+          />
+          <p className={styles.weatherInfoText}>Humidity: {humidity}%</p>
+        </div>
       </div>
       <p className={styles.time}>Time: {formattedDateTime}</p>
-      <p>Cloud Cover: {cloudCover}</p>
-      <p>Humidity: {humidity}%</p>
-      <p>Rain: {rainChances}</p>
-      <p>Cloudiness: {weather?.[0]?.description || 'N/A'}</p>
+      <div className={styles.toggleButton}>
+        <button onClick={toggleUnit}>
+          {isMetric ? 'Switch to Imperial' : 'Switch to Metric'}
+        </button>
+      </div>
     </div>
   );
 };

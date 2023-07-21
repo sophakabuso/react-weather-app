@@ -1,91 +1,88 @@
 
+/* WeatherInfo.module.css */
+
 .weatherInfo {
-  background-color: #292d33;
+  background-color: #534e51;
   padding: 20px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(246, 6, 6, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #149bbc;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .weatherIcon {
   width: 50px;
   height: 50px;
-  margin-bottom: 10px;
+  margin-right: 15px;
+  filter: drop-shadow(0 0 5px rgba(15, 230, 33, 0.4));
 }
 
-.weatherConverterContainer {
+.weatherDetails {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap; /* Wrap the weather info horizontally */
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.iconInfo {
+  display: flex;
   align-items: center;
-}
-
-.unitButtons {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.weatherConverterButton {
-  cursor: pointer;
-  border: none;
+  margin: 10px;
+  padding: 10px;
   border-radius: 5px;
-  padding: 5px 10px;
-  margin: 0 5px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #454c59;
+  background-color: #491212;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.weatherConverterButton.active {
-  background-color: #007bff;
-}
-
-.weatherConverterInfo {
-  margin: 5px 0;
-  color: #fff;
+.weatherInfoText {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0;
+  color:#149bbc;
 }
 
 .time {
-  margin-bottom: 10px;
-  color: #a0a0a0;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #f35c11;
 }
 
 p {
   margin: 5px 0;
 }
 
-/* Custom styles for different weather conditions */
-.weatherInfo p {
-  font-size: 16px;
+.weatherIcon {
+  /* Add your styles for the weather icons here */
+  font-size: 24px; /* Set the font size for the icons */
 }
 
-.weatherInfo p:first-child {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
+.temperatureIcon {
+  color: rgb(237, 20, 49); /* Set the color for the temperature icon */
 }
 
-.weatherInfo p:nth-child(3) {
-  margin-top: 20px;
+.windIcon {
+  color:   light blue; /* Set the color for the wind icon */
 }
 
-.weatherInfo p:nth-child(4) {
-  margin-bottom: 15px;
+.rainIcon {
+  color:  cyan; /* Set the color for the rain icon */
 }
 
-.weatherInfo p:nth-child(5) {
-  margin-bottom: 15px;
+.cloudIcon {
+  color: gray; /* Set the color for the cloud icon */
 }
 
-.weatherInfo p:nth-child(6) {
-  margin-bottom: 15px;
+.humidityIcon {
+  color:green ; /* Set the color for the humidity icon */
 }
-
-.weatherInfo p:nth-child(7) {
-  margin-bottom: 15px;
-}
-
-.weatherInfo p:last-child {
-  margin-bottom: 0;
-}
-
-

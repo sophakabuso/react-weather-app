@@ -4,14 +4,14 @@
     text-align: center;
     padding: 20px;
     background-color: #1d1f23;
-    color: #fff;
+    color:#149bbc;
   }
   
   .appHeader {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .logo {
