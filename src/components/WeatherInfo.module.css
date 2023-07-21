@@ -2,10 +2,10 @@
 /* WeatherInfo.module.css */
 
 .weatherInfo {
-  background-color: #534e51;
-  padding: 20px;
+  background-color: #141314a9;
+  padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(246, 6, 6, 0.1);
+  box-shadow: 0 4px 8px rgba(237, 37, 23, 0.966);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ h2 {
   width: 50px;
   height: 50px;
   margin-right: 15px;
-  filter: drop-shadow(0 0 5px rgba(15, 230, 33, 0.4));
+  filter: drop-shadow(0 0 5px rgba(227, 234, 36, 0.994));
 }
 
 .weatherDetails {
@@ -41,8 +41,8 @@ h2 {
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #491212;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #131111;
+  box-shadow: 0 4px 6px rgba(239, 12, 12, 0.1);
 }
 
 .weatherInfoText {
@@ -55,7 +55,7 @@ h2 {
 .time {
   margin-top: 10px;
   font-size: 14px;
-  color: #f35c11;
+  color: #f70e0ef4;
 }
 
 p {

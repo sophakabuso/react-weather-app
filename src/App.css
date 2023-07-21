@@ -4,7 +4,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #25b0ec;
+  background-color: #303434;
 }
 
 .app {
@@ -54,7 +54,7 @@ h1 {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ddd;
+  border: 1px solid #e9ecf3db;
   border-radius: 5px;
   margin-bottom: 10px;
 }
