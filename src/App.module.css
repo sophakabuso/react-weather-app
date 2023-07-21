@@ -1,0 +1,41 @@
+/* App.module.css */
+.app {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #1d1f23;
+    color: #fff;
+  }
+  
+  .appHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  
+  @media (prefers-reduced-motion: no-preference) {
+     .logo {
+      animation: logo infinite 20s linear;
+    }
+  }
+  @keyframes logo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
