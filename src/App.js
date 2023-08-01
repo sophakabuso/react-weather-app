@@ -1,8 +1,7 @@
-// App.js
+// App.js (Main component that holds the application)
 import React, { useState } from 'react';
 import WeatherService from './components/WeatherService';
 import WeatherInfo from './components/WeatherInfo';
-
 import styles from './App.module.css';
 import earthpic from './assets/images/earthpic.png';
 
@@ -11,11 +10,12 @@ const App = () => {
   const [isMetric, setIsMetric] = useState(true);
 
   const handleWeatherData = (data) => {
+    // Function to handle the weather data received from the WeatherService component
     setWeatherData(data);
   };
 
-  // Function to update the isMetric state
   const toggleUnit = () => {
+    // Function to toggle the unit between metric and imperial
     setIsMetric((prev) => !prev);
   };
 
@@ -25,12 +25,14 @@ const App = () => {
         <img src={earthpic} alt="Weather App Logo" className={styles.logo} />
         <h1>Weather Status</h1>
       </div>
+      {/* WeatherService component responsible for fetching and displaying weather data */}
       <WeatherService onWeatherData={handleWeatherData} />
+      {/* WeatherInfo component to display weather information */}
       {weatherData && (
         <WeatherInfo
           weatherData={weatherData}
           isMetric={isMetric}
-          toggleUnit={toggleUnit} // Pass the toggleUnit function as a prop
+          toggleUnit={toggleUnit}
         />
       )}
     </div>
@@ -38,3 +40,4 @@ const App = () => {
 };
 
 export default App;
+
